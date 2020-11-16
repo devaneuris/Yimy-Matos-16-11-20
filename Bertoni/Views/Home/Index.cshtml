@@ -1,0 +1,14 @@
+﻿@model Bertoni.ViewModels.AlbumsViewModel;
+
+@{
+    ViewData["Title"] = "Albums";
+}
+
+<div class="text-center">
+    <h1>Select album</h1>
+    <form asp-controller="Home" asp-action="Index" method="post">
+        <select class="form-control" asp-for="AlbumId" asp-items="Model.Albums"></select>
+
+        <button class="btn btn-primary mt-3" type="submit"> Visualizar Album </button>
+    </form>
+</div>

@@ -1,0 +1,19 @@
+@model List<BertoniLibrary.Models.Comment>
+
+<div class="container">
+    @if (!Model.Any()) {
+        <p>No Comment in this Item</p>
+    }
+    @foreach(var comment in Model) {
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title bg-primary">@comment.Name</h4>
+            </div>
+            <div class="card-body">
+                <h6 class="card-subtitle">@comment.Email</h6>
+                <p class="card-text">@comment.Body</p>
+            </div>
+        </div>
+        <br />
+    }
+</div>
